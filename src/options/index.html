@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>AMark选项</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<div id="main">
+    <h1>CSS 规则</h1>
+    <div class="control"><button class="btn" id="add">添加规则</button><button class="btn" id="export">导出全部规则</button><label for="import"><span class="btn">导入规则文件</span></label><input type="file" name="import" id="import" style="display: none;"></div>
+    <table id="rulelist">
+        <thead>
+            <tr><th>规则名称</th><th>URL 正则匹配</th><th></th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<div id="view-bg">
+<div id="view">
+    <span class="close">&times;</span>
+    <div class="content"></div>
+</div>
+</div>
+<script id= "tpl-rule" type="text/template">
+<tr data-key="{$key}"><td>{$name}</td><td>{$key}</td><td><a href="#detail" class="detail">查看</a><a href="#edit" class="edit">编辑</a><a href="#del" class="del">删除</a></td></tr>
+</script>
+<script id= "tpl-editor" type="text/template">
+<label for="name">规则名称</label>
+<input type="text" name="name" class="name" value="{$name}">
+<label for="key">URL 正则</label>
+<input type="text" name="key" class="key" value="{$key}">
+<label for="csstext">CSS</label>
+<textarea name="csstext" class="csstext">{$css}</textarea>
+<button class="submit">提交</button>
+</script>
+<script id= "tpl-detail" type="text/template">
+<h5>规则名称：{$name}</h5>
+<p>URL 正则：<code>{$key}</code></p>
+<div class="code-view"><pre><code class="lang-css">{$css}</code></pre></div>
+</script>
+<script src="../lib/jquery-2.0.0.min.js"></script>
+<script src="../lib/jquery.base64.js"></script>
+<script src="../lib/FileSaver.js"></script>
+<script src="../lib/prism.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

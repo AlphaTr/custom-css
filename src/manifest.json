@@ -1,0 +1,27 @@
+{
+    "name": "Custom CSS",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "minimum_chrome_version": "33",
+    "description": "模拟 Chrome 的 Custom CSS 文件，并增强提供对单个网址插入的扩展",
+    "background": {
+        "page": "main.html",
+        "script": [
+            "main.js"
+        ]
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "*://*/*"
+    ],
+    "icons": {
+        "16": "icons/icon-16.png",
+        "32": "icons/icon-16@2.png",
+        "48": "icons/icon-48.png",
+        "96": "icons/icon-48@2.png",
+        "128": "icons/icon-128.png",
+        "256": "icons/icon-128@2.png"
+    },
+    "options_page": "options/index.html"
+}

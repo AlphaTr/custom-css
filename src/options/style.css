@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    background: #F5F5F5;
+    font-family: 'Microsoft YaHei';
+    letter-spacing: .05em;
+}
+.clearfix:after{content:"";display:table;clear:both;overflow:hidden}
+.clearfix{zoom:1;/* IE < 8 */}
+
+a {
+    color: #36D;
+    font-size: 14px;
+    text-decoration: none;
+}
+a:hover {
+    color: #36F;
+    text-decoration: underline;
+}
+
+/* content */
+#main {
+    width: 720px;
+    margin: 20px auto;
+}
+#main h1 {
+    margin: 0;
+    height: 30px;
+    font-size: 22px;
+    line-height: 30px;
+    color: #444;
+    font-weight: normal;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #DDD;
+}
+#main .control {
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+}
+#main .control .btn {
+    box-sizing: content-box;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 0;
+    height: 28px;
+    border: 1px solid #DCDCDC;
+    padding: 0 20px;
+    border-radius: 2px;
+    text-align: center;
+    color: #000000;
+    font-size: 18px;
+    background: -webkit-linear-gradient(top, #FFFFFF 0%,#F6F6F6 100%);
+    background: linear-gradient(to bottom, #FFFFFF 0%,#F6F6F6 100%);
+    font-family: '微软雅黑';
+}
+#main table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+#main table, #main table tr, #main table td, #main table th {
+    border: 1px solid #BBB;
+}
+#view-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .2);
+    display: none;
+}
+#view {
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    width: 720px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #FFF;
+    padding: 20px;
+    z-index: 5;
+}
+#view label {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+}
+#view input, #view textarea {
+    width: 708px;
+    padding: 3px 5px;
+    line-height: 22px;
+    border: 1px solid #BBB;
+    border-radius: 2px;
+    margin: 0;
+    font-family: monospace;
+}
+#view input:hover, #view textarea:hover {
+    border-color: #888;
+}
+#view input:focus, #view textarea:focus {
+    border-color: #69F;
+    outline: none;
+}
+
+#view input {
+    height: 22px;
+}
+
+#view textarea {
+    padding: 5px;
+    position: absolute;
+    top: 170px;
+    bottom: 60px;
+    resize: none;
+}
+#view .submit {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin: 0 0 0 0;
+    height: 28px;
+    border: 1px solid #CCC;
+    padding: 0 20px;
+    border-radius: 2px;
+    text-align: right;
+    font-family: '微软雅黑';
+}
+
+/* Code blocks */
+#view pre {
+    color: black;
+    font-family: monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    hyphens: none;
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #708090;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.builtin {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+    color: #a67f59;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+
+.token.regex,
+.token.important {
+    color: #e90;
+}
+
+.token.important {
+    font-weight: bold;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
