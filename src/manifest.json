@@ -1,9 +1,9 @@
 {
     "name": "Custom CSS",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "manifest_version": 2,
     "minimum_chrome_version": "33",
-    "description": "模拟 Chrome 的 Custom CSS 文件，并增强提供对单个网址插入的扩展",
+    "description": "模拟 Chrome 的 Custom CSS 文件，并增强提供对单个网址插入自定义 CSS 的扩展",
     "background": {
         "page": "main.html",
         "script": [

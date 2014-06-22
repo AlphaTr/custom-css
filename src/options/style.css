@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background: #F5F5F5;
+    background: #FFF;
     font-family: 'Microsoft YaHei';
     letter-spacing: .05em;
 }
@@ -34,32 +34,66 @@ a:hover {
 }
 #main .control {
     height: 30px;
-    line-height: 30px;
     margin: 10px 0;
+    text-align: right;
 }
 #main .control .btn {
     box-sizing: content-box;
     display: inline-block;
     vertical-align: middle;
-    margin: 0 0 0 0;
+    margin: 0 0 0 10px;
     height: 28px;
-    border: 1px solid #DCDCDC;
-    padding: 0 20px;
+    line-height: 28px;
+    border: 1px solid #DDD;
+    padding: 0 15px;
     border-radius: 2px;
     text-align: center;
-    color: #000000;
-    font-size: 18px;
-    background: -webkit-linear-gradient(top, #FFFFFF 0%,#F6F6F6 100%);
+    color: #555;
+    font-size: 13px;
     background: linear-gradient(to bottom, #FFFFFF 0%,#F6F6F6 100%);
     font-family: '微软雅黑';
+}
+#main .control .btn:hover {
+    outline: none;
+    background: linear-gradient(to bottom, #F6F6F6 0%,#FFF 100%);
+    color: #222;
+    border-color: #BBB;
 }
 #main table {
     width: 100%;
     border-collapse: collapse;
     font-size: 14px;
+    background-color: #F5F5F5;
 }
 #main table, #main table tr, #main table td, #main table th {
-    border: 1px solid #BBB;
+    border: none;
+    border-left: 1px solid #FFF;
+}
+#main table th, #main table td {
+    height: 26px;
+    line-height: 26px;
+    padding: 3px 10px;
+    font-weight: normal;
+}
+#main table thead {
+    background-color: #789;
+    text-align: left;
+    color: #FFF;
+    font-weight: normal;
+}
+#main table tbody tr:nth-child(even) {
+    background: #E5E5E5;
+}
+#main table tbody code {
+    font-family: monospace;
+}
+#main table tbody td:last-child {
+    text-align: center;
+    width: 120px;
+}
+#main table tbody a {
+    margin: 0 .4em;
+    color: #5a6673;
 }
 #view-bg {
     position: fixed;
@@ -82,6 +116,24 @@ a:hover {
     padding: 20px;
     z-index: 5;
 }
+#view .close {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    width: 45px;
+    height: 24px;
+    color: #F63;
+    background: #EEE;
+    text-align: center;
+    line-height: 26px;
+    font-size: 24px;
+    font-family: 'Times New Roman';
+    cursor: pointer;
+}
+#view .close:hover {
+    color: #FFF;
+    background: #F63;
+}
 #view label {
     display: block;
     height: 30px;
@@ -101,7 +153,7 @@ a:hover {
     border-color: #888;
 }
 #view input:focus, #view textarea:focus {
-    border-color: #69F;
+    border-color: #789;
     outline: none;
 }
 
@@ -128,9 +180,26 @@ a:hover {
     text-align: right;
     font-family: '微软雅黑';
 }
+#view h5, #view p {
+    margin: 0 0 10px 0;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+}
+#view .code-view {
+    width: 720px;
+    position: absolute;
+    top: 100px;
+    bottom: 20px;
+    background-color: #F6F6F6;
+    overflow: auto;
+}
 
 /* Code blocks */
-#view pre {
+#view .code-view pre {
+    margin: 15px;
+    font-size: 13px;
+    line-height: 22px;
     color: black;
     font-family: monospace;
     text-align: left;
@@ -140,9 +209,6 @@ a:hover {
     tab-size: 4;
     -webkit-hyphens: none;
     hyphens: none;
-    padding: 1em;
-    margin: .5em 0;
-    overflow: auto;
 }
 
 .token.comment,
